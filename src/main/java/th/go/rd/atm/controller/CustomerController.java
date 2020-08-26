@@ -6,10 +6,11 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
-import java.util.ArrayList;
+import th.go.rd.atm.model.Customer;
+import th.go.rd.atm.service.CustomerService;
 
 @Controller
+@RequestMapping("/customer")
 public class CustomerController {
 
     private CustomerService customerService;
@@ -19,14 +20,14 @@ public class CustomerController {
         this.customerService = customerService;
     }
 
-    @GetMapping ("/customer")
+    @GetMapping
     public String getCustomerPage(Model model)
     {
         model.addAttribute("allCustomers",customerService.getCustomers());
         return "customer"; // customer.html
 
     }
-@PostMapping("customer")
+@PostMapping
 public String registerCustomer(@ModelAttribute Customer customer, Model model)
 {
      customerService.createCustomer(customer);

@@ -1,4 +1,4 @@
-package th.go.rd.atm.controller;
+package th.go.rd.atm.model;
 
 public class Customer {
     private int id;

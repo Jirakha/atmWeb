@@ -1,6 +1,7 @@
-package th.go.rd.atm.controller;
+package th.go.rd.atm.service;
 
 import org.springframework.stereotype.Service;
+import th.go.rd.atm.model.Customer;
 
 import javax.annotation.PostConstruct;
 import java.util.ArrayList;
