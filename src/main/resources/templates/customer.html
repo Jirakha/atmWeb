@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/main_layout}"
+      xmlns:th="https://www.thymeleaf.org">
+
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +10,7 @@
 </head>
 <body>
 
-
+<div class="container" layout:fragment="content">
 <h1>Register Customer</h1>
 <form action="#" th:action="@{/customer}" method="POST">
     <div class="form-group">

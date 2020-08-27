@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th = "https://www.thyemleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Home</title>
-    <link th:rel="stylesheet" th:href="@{css/bootstrap.min.css}">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-    <link th:rel="stylesheet" th:href="@{css/mystyle.css}">
+<html xmlns:layout="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{fragments/main_layout}"
+      xmlns:th="https://www.thymeleaf.org">
+<div layout:fragment="content" class="container">
+    <div class="jumbotron">
+        <h1 class="my-font display-4" th:text="${greeting}"></h1>
+    </div>
+</div>
 
-
-</head>
 <body>
 <div class="container">
     <div class="jumbotron">
