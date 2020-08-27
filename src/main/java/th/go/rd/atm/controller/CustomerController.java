@@ -21,19 +21,18 @@ public class CustomerController {
     }
 
     @GetMapping
-    public String getCustomerPage(Model model)
-    {
-        model.addAttribute("allCustomers",customerService.getCustomers());
+    public String getCustomerPage(Model model) {
+        model.addAttribute("allCustomers", customerService.getCustomers());
         return "customer"; // customer.html
 
     }
-@PostMapping
-public String registerCustomer(@ModelAttribute Customer customer, Model model)
-{
-     customerService.createCustomer(customer);
-     model.addAttribute("allCustomers", customerService.getCustomers());
-     return "redirect:customer";
-}
+
+    @PostMapping
+    public String registerCustomer(@ModelAttribute Customer customer, Model model) {
+        customerService.createCustomer(customer);
+        model.addAttribute("allCustomers", customerService.getCustomers());
+        return "redirect:customer";
+    }
 
 
 }
